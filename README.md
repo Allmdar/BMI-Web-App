@@ -17,10 +17,11 @@ In the second file (bmi_frontpage.html), we start with arranging the HTML file a
   
 
 Between **line 40-54**, I set up the form. Moreover, I used an **action and method within the form element** to *redirect the user to the result when the form is submitted*. Lastly, when the input is asked from the user (weight/height), I set the following within the element: 
-  *type=”number” → To not allow the user to enter a string or produce an error if the user does 
-  step=”any” → allows the user to enter floating point numbers
-  value=0 → default value
-  name=”weight” or name=”height”→ As a reference or placeholder that is used later on in our python algorithm.*
+  
+*type=”number” → To not allow the user to enter a string or produce an error if the user does* 
+*step=”any” → allows the user to enter floating point numbers*
+*value=0 → default value*
+*name=”weight” or name=”height”→ As a reference or placeholder that is used later on in our python algorithm.*
   
 The third file (result.html) connects all the dots together. The code between **<% %>** represents the python code. The python code gets the height and width and converts into a float for the BMI Calculation: 
   *output = (round((weight/height**2) * 703,2)) *
