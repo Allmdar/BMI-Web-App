@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BMI APP</title>
+
+    <style>
+      body{
+        background-color: rgb(255, 255, 0);
+      }
+
+      h1{
+        text-align: center;
+      }
+
+      form{
+        width: 500px;
+        margin: auto;
+        background-color: aqua;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+      }
+
+      img{
+        padding-top: 20px;
+        display:block;
+        margin-left:auto;
+        margin-right: auto;
+        width: 500px;
+        height: 500px;
+        object-fit: contain;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <h1>Welcome to the BMI WEB APP</h1>
+
+    <form action = "/result"
+          method = "post">
+      <label>Height (in inches)</label>
+      <input type="number"
+              step="any"
+            value="0"
+            name="height">
+
+      <label>Weight (in pounds)</label>
+      <input type="number"
+              step="any"
+              value="0"
+              name="weight">
+
+      <button type = "submit">submit</button>
+
+    </form>
+
+    <img src="https://www.cdc.gov/healthyweight/images/assessing/bmi-adult-fb-600x315.jpg?_=07167">
+  </body>
+</html>

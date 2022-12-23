@@ -1,0 +1,56 @@
+<%
+
+from bottle import request
+height = request.forms.get("height")
+height = float(height)
+weight = request.forms.get("weight")
+weight = float(weight)
+
+output = (round((weight/height**2) * 703,2))
+out = str(output)
+
+status=""
+if output<18.5:
+  status="underweight"
+elif output<24.9:
+  status="normal"
+elif output<29.9:
+  status="overweight"
+else:
+  status="Obese"
+
+end # This is really important!!!
+
+%>
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Result</title>
+    <style>
+        h1{
+          text-align: center;
+          background-color: rgb(255, 200, 0);
+        }
+        p{
+           font-style: italic;
+           font-size: 30px;
+           text-align: center;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Result</h1>
+
+    <p>
+        BMI : {{ out }}
+    </p>
+
+    <p>
+      Condition : {{ status }}
+    </p>
+
+  </body>
+
+</html>
