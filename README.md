@@ -27,7 +27,7 @@ Between **line 40-54**, I set up the form. Moreover, I used an **action and meth
 *name=”weight” or name=”height”→ As a reference or placeholder that is used later on in our python algorithm.*
   
 The third file (result.html) connects all the dots together. The code between **<% %>** represents the python code. The python code gets the height and width and converts into a float for the BMI Calculation: 
-  *output = (round((weight/height**2) * 703,2)) *
+  *output = (round((weight/height**2) * 703,2))*
   
 I then checked whether the output met a certain scenario for the BMI using an if statement and then closed the python code with **“end.”** Both the calculation of the BMI and the status of the BMI are printed on the web page using **{{}}** after they are converted from an integer to a string.
   
